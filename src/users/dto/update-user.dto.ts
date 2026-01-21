@@ -4,4 +4,7 @@ import { CreateUserDto } from './create-user.dto';
 export class UpdateUserDto extends PartialType(CreateUserDto) {
   @ApiPropertyOptional({ example: 'Updated Name' })
   name?: string;
+
+  @ApiPropertyOptional({ example: 'password456' })
+  password?: string;
 }
