@@ -3,7 +3,7 @@ import { DataService } from './data.service';
 import { CreateDataDto } from './dto/create-data.dto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 
-@ApiTags('users')
+@ApiTags('data')
 @Controller('data')
 export class DataController {
   constructor(private readonly dataService: DataService) {}
