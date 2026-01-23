@@ -5,6 +5,13 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  // Allow your Vite frontend (localhost:5173/5174) to call this API from the browser
+  app.enableCors({
+    origin: ['http://localhost:5173', 'http://localhost:5174'],
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
+  });
+
   const config = new DocumentBuilder()
     .setTitle('Kickstarter API')
     .setDescription('API documentation for the Kickstarter server')
