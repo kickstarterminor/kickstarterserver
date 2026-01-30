@@ -27,3 +27,9 @@ model Data {
   value     String
   createdAt DateTime @default(now())
 }
+
+model Alarm {
+  id        String   @id @default(uuid()) @db.Uuid
+  deviceId  String
+  createdAt DateTime @default(now())
+}
