@@ -7,7 +7,7 @@ async function bootstrap() {
 
   // Allow your Vite frontend (localhost:5173/5174) to call this API from the browser
   app.enableCors({
-    origin: ['http://localhost:5173', 'http://localhost:5174'],
+    origin: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
   });
